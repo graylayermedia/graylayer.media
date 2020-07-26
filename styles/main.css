@@ -21,9 +21,9 @@ html,body{
 }
 
 body {
-		justify-content: center;
+    justify-content: center;
     justify-items: center;
-		align-items: center;
+    align-items: center;
     background-color: #333333;
     overflow: hidden;
 }
@@ -35,7 +35,7 @@ body:before{
     height: 400%;
     z-index: -1;
     background: #333333 linear-gradient(-45deg, #0000ff66 0%, #ff00ff66 100%);
-		animation: BackgroundRotate 2s linear infinite;
+    animation: BackgroundRotate 2s linear infinite;
 }
 
 .logo {
