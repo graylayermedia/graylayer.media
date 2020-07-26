@@ -1,0 +1,46 @@
+@keyframes BackgroundRotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+html,body{
+    display: flex;
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+		justify-content: center;
+    justify-items: center;
+		align-items: center;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+body:before{
+    content: "";
+    position: fixed;
+    width: 400%;
+    height: 400%;
+    z-index: -1;
+    background: #333333 linear-gradient(-45deg, #0000ff66 0%, #ff00ff66 100%);
+		animation: BackgroundRotate 2s linear infinite;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;
+}
