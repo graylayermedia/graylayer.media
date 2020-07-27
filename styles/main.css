@@ -31,10 +31,16 @@ body {
 body:before{
     content: "";
     position: fixed;
+
+    /* Fallback values for if the next `calc` values fail (unsupported, etc) */
     width: 200%;
     height: 200%;
-    min-width: calc(max(100vw, 100vh) * 2);
-    min-height: calc(max(100vw, 100vh) * 2);
+
+    /* Thanks Pythagoras! */
+    /* See "Pythagoras's Constant", √2, (2 * cos(45deg)) */
+    width: calc(max(100vw * 1.42, 100vh * 1.42));
+    height: calc(max(100vw * 1.42, 100vh * 1.42));
+
     z-index: -1;
     background: #333333 linear-gradient(-45deg, #0000ff66 0%, #ff00ff66 100%);
     animation: background-rotate 4s linear infinite;
