@@ -13,7 +13,6 @@
 html,body{
     display: flex;
     width: 100%;
-    min-width: 320px;
     min-height: 100vh;
     max-height: 100vh;
     box-sizing: border-box;
@@ -32,8 +31,10 @@ body {
 body:before{
     content: "";
     position: fixed;
-    width: 400%;
-    height: 400%;
+    width: 200%;
+    height: 200%;
+    min-width: calc(max(100vw, 100vh) * 2);
+    min-height: calc(max(100vw, 100vh) * 2);
     z-index: -1;
     background: #333333 linear-gradient(-45deg, #0000ff66 0%, #ff00ff66 100%);
     animation: BackgroundRotate 2s linear infinite;
